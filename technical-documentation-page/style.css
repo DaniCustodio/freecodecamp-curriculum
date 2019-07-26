@@ -1,0 +1,146 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Open Sans", Arial, sans-serif;
+	background-color: white;
+	font-size: 14px;
+	line-height: 1.8em;
+}
+
+/*ASIDE*/
+.index {
+	/*Layout*/
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 30%;
+	height: 100vh;
+	overflow-y: scroll;
+	z-index: 10000;
+	/*Visual*/
+	background-color: white;
+	border-right: 3px solid gray;
+}
+
+.nav-title {
+	font-size: 1.8em;
+	text-align: center;
+}
+
+.index-links {
+	list-style-type: none;
+	padding: 0;
+	font-size: 1.2em;
+}
+
+.nav-item {
+	padding-top: 1em;
+	padding-bottom: 1em;
+	padding-left: 1.7em;
+	border-top: 2px solid gray;
+}
+
+.nav-link {
+	text-decoration: none;
+	color: black;
+}
+
+.navbar-active {
+	display: block !important;
+}
+
+/*MAIN*/
+.documentation {
+	width: 70%;
+	margin-left: 30%;
+	padding: 10px 20px;
+}
+
+.main-section {
+	margin-bottom: 2em;
+}
+
+.section-title {
+	font-size: 1.8em;
+	font-weight: bold;
+}
+
+.section-content {
+	margin-left: 1em;
+}
+
+.bullet-points {
+	margin-left: 1.5em;
+}
+
+.bullet-items {
+	margin-bottom: 1em;
+}
+
+.code {
+	padding: 0.7em;
+	margin-left: 0.8em;
+	background-color: #f7f7f7;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 0.9em;
+}
+
+/*MISC*/
+.burger {
+	display: none;
+	cursor: pointer;
+}
+
+.burger div {
+	width: 25px;
+	height: 3px;
+	background-color: rgb(8, 6, 6);
+	margin: 5px;
+	transition: all 0.3s ease;
+}
+
+.toggle .line1 {
+	transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+	opacity: 0;
+}
+.toggle .line3 {
+	transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@media screen and (max-width: 768px) {
+	.index {
+		width: 100%;
+		height: 90px;
+		overflow-y: hidden;
+		background-color: aliceblue;
+	}
+
+	.index-header {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	.index-links {
+		position: fixed;
+		top: 90px;
+		left: 0;
+		width: 100%;
+		margin-top: 0;
+		display: none;
+		background-color: aliceblue;
+	}
+	.documentation {
+		margin-top: 90px;
+		width: 100%;
+		margin-left: 0;
+	}
+	.burger {
+		display: block;
+	}
+}
